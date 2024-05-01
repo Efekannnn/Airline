@@ -30,4 +30,19 @@ class Passengers(models.Model):
 
     def __str__(self):
         return f"{self.first} {self.last}"
+
+SEAT_CLASS = (
+    ('economy', 'Economy'),
+    ('business', 'Business')
+)
+    
+class Ticket(models.Model):
+    flight = models.ForeignKey(Flight, on_delete=models.CASCADE, related_name="tickets")
+    passenger = models.ForeignKey(Passengers, on_delete=models.CASCADE, related_name="tickets")
+    seat_class = models.CharField(max_length=32, choices=SEAT_CLASS)  
+
+    def __str__(self):
+        return f"Ticket for {self.passenger} on Flight {self.flight} ({self.seat_class})"
+
+
     
