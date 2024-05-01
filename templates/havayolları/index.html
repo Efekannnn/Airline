@@ -1,0 +1,40 @@
+{% extends 'havayolları/layout.html' %} <!--layouts şablonunun üstüne ekler-->
+{% block title %}Uçuşlar{%endblock%}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h2>Uçuşlar</h2>
+            <table class="table" border="1"> <!--1 piksellik sınır ekler-->
+                <thead> <!--başlık bölümüüdür th hücreleri yer alır--> 
+                    <tr> <!--tablo satırını temsil eder-->
+                        <th>No</th>
+                        <th>Kalkış Yeri Havaalanı</th>
+                        <th>Varış Yeri Havaalanı</th>
+                        <th>Kalkış Tarihi</th> <!--tablodaki başlıklardır-->
+                        <th>Varış Tarihi</th>
+                        <th>Firma</th>
+                        <th>Uçuş süresi</th>
+                        <th>Uçak No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ucus in ucuslar %} <!--ucuslar modelsinden gelen listeyi ucusla döndürürüz tek tek-->
+                    <tr>
+                        <td>{{ucus.ucus_id}}</td> <!--verilerin geldiği hücrelerdir onu temsil eder-->
+                        <td>{{ucus.kalkis_havaalani_id }}</td>
+                        <td>{{ucus.varis_havaalani_id }}</td>           
+                        <td>{{ucus.kalkis_tarihi}}</td>
+                        <td>{{ucus.varis_tarihi}}</td>
+                        <td>{{ucus.havayolu_adi}}</td>
+                        <td>{{ucus.ucus_sure}}</td>
+                        <td>{{ucus.ucak_no}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
