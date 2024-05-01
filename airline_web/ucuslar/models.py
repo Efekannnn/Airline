@@ -2,7 +2,7 @@ from datetime import date
 from django.db import models
 
 # Create your models here.
-class Havaalanlari(models.Model):
+class Airport(models.Model):
     code = models.CharField(max_length=3)
     city = models.CharField(max_length=32)
     
@@ -10,9 +10,9 @@ class Havaalanlari(models.Model):
         return f"{self.city} ({self.code})"
     
 
-class Ucuslar(models.Model):
-    origin = models.ForeignKey(Havaalanlari, on_delete=models.CASCADE, related_name="departures")
-    destination = models.ForeignKey(Havaalanlari, on_delete=models.CASCADE, related_name="arrivals")
+class Flight(models.Model):
+    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="departures")
+    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="arrivals")
     duration = models.IntegerField()   
     kalkis_tarihi = models.DateField(default=date.today) 
     varis_tarihi = models.DateField(default=date.today)
