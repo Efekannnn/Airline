@@ -3,6 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:flight_id>', views.flight, name="flight")
+    path('', views.anasayfa, name='index'),
+    path('/list', views.list_flight, name='list'),
+    path('/<int:flight_id>', views.flight, name="flight")
 ]

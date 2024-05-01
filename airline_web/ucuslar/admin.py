@@ -1,7 +1,12 @@
 from django.contrib import admin
-from .models import Flight, Airport, Passenger
+from .models import Flight, Airport, Passengers
 # Register your models here.
+class FlightAdmin(admin.ModelAdmin):
+    list_display = ("id", "origin", "destination", "duration", "kalkis_tarihi", "varis_tarihi")
 
-admin.site.register(Flight)
+class PassangerAdmin(admin.ModelAdmin):
+    filter_horizontal = ("flights",)
+
+admin.site.register(Flight, FlightAdmin)
 admin.site.register(Airport)
-admin.site.register(Passenger)
+admin.site.register(Passengers, PassangerAdmin)
