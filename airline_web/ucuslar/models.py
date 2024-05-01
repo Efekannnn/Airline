@@ -5,9 +5,11 @@ from django.db import models
 class Airport(models.Model):
     code = models.CharField(max_length=3)
     city = models.CharField(max_length=32)
+    country = models.CharField(max_length=32, default="country")
+    
     
     def __str__(self):
-        return f"{self.city} ({self.code})"
+        return f"{self.city} ({self.code}) {self.country}"
     
 
 class Flight(models.Model):
@@ -20,3 +22,12 @@ class Flight(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.origin} to {self.destination}"
+    
+class Passenger(models.Model):
+    first = models.CharField(max_length=32)
+    last = models.CharField(max_length=32)
+    flights = models.ManyToManyField(Flight, blank=True, related_name="passangers")
+
+    def __str__(self):
+        return f"{self.first} {self.last}"
+    

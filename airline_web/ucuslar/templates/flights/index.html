@@ -4,8 +4,7 @@
 <h1>Ucuslar</h1>
 <ul>
     {% for flight in flights %}
-        <li>Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }} 
-        {{flight.kalkis_tarihi}} {{flight.varis_tarihi}} {{flight.havayolu_adi}} </li>
+        <li>Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }} </li>
     {% endfor %}
 </ul>
 {% endblock  %}

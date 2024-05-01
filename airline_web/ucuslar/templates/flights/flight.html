@@ -1,0 +1,14 @@
+{% extends "flights/layout.html" %}
+
+{% block body %}
+    <h1>Flight {{ flight.id }} </h1>
+
+    <ul>
+        <li>Kalkış: {{ flight.origin }} </li>
+        <li>Varış: {{ flight.destination }} </li>
+        <li>Süre: {{ flight.duration }} </li>
+        <li>Kalkış tarihi: {{ flight.kalkis_tarihi }} </li>
+        <li>Varış tarihi: {{ flight.varis_tarihi }} </li>
+        <li>Havayolu: {{ flight.havayolu_adi }} </li>
+    </ul>
+{% endblock  %}
