@@ -1,7 +1,9 @@
 {% extends 'havayolları/layout.html' %} <!--layouts şablonunun üstüne ekler-->
+{% load static %}
 {% block title %}Uçuş Arama{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 <div class="container">
     <div class="row justify-content-center"> <!--satır oluşturma-->
         <div class="col-lg-8"> <!--sutun oluşturma-->
@@ -23,12 +25,14 @@
                     <label for="end_date">Bitiş Tarihi:</label>
                     <input type="date" class="form-control" id="end_date" name="end_date">
                 </div>
-                <button type="submit" class="btn btn-primary">Ara</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger">Ara</button>
+                </div>
             </form>
         </div>
     </div>
     <div class="row justify-content-center mt-4"> <!--bilgilendirme metnini eklemek için satır oluşturma-->
-        <div class="col-lg-8 alert alert-info"> <!--bilgilendirme metnini eklemek için sütun oluşturma-->
+        <div class="col-lg-5 alert alert-info"> <!--bilgilendirme metnini eklemek için sütun oluşturma-->
             Değerli Yolcularımız, Irak, İran, Ürdün ve Lübnan’daki mevcut durum sebebiyle Irak, İran, Ürdün ve Lübnan uçuşlarımız yoktur.
         </div>
     </div>
