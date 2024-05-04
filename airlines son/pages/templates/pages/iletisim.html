@@ -1,45 +1,83 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css"/>
     <title>İletişim</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url("https://w0.peakpx.com/wallpaper/121/817/HD-wallpaper-emirates-airbus-a380-night-landing-d.jpg");
+            background-image: url('{% static "img/görsel4.jpg" %}');
+            background-position: center 0px;
+            background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            
         } 
 
-        .container { 
+        .container1 {
             max-width: 600px;
             margin: 50px auto;
-            background-color: rgba(255, 255, 255, 0.8); /* Arkaplanın netliğini ayarlayabilirsiniz */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
         }
-
+        
         .container h2 {
-            text-align: center;
             margin-bottom: 20px;
         }
-
+        
         .contact-info {
-            text-align: center;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
         }
-
-        .contact-info p {
+        
+        .info-item {
             margin-bottom: 10px;
         }
+        
+        .info-item strong {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .info-item span {
+            color: #666;
+        }
+        .form-group {
+            padding: 5px;
+        }
+        
     </style>
 </head>
 <body>
-
-<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <div class="container">
+            <a href="/" class="navbar-brand text-white">Bilet Al</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link text-white">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/iletisim" class="nav-link text-white">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/hakkimizda" class="nav-link text-white">Hakkımızda</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container1">
     <h2>İletişim Bilgileri</h2>
     <div class="contact-info">
         <p><strong>Telefon:</strong> 0850530486245</p>
@@ -48,7 +86,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container1">
     <h2>Şikayetinizi ve Önerinizi Yazabilirsiniz</h2>
     <form action="/submit" method="post">
         {% csrf_token %}
@@ -69,6 +107,6 @@
         </div>
     </form>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 </body>
 </html>

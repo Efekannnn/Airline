@@ -80,16 +80,11 @@ WSGI_APPLICATION = 'airlines.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default':{
-        'ENGINE': 'django.db.backends.mysql', #mysql uzantı
-        'NAME': 'airline', #database ismi
-        'USER': 'root', #kulanıcı adı
-        'PASSWORD': 'fener456', #şifre
-        'HOST': 'localhost',  # MySQL sunucusununn adresi
-        'PORT': '3306',       # varsılan
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.mysql.sql',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -126,6 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
