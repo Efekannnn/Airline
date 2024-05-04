@@ -51,7 +51,7 @@ komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(
 python manage.py runserver
 
 
-## Geliştirilen Arayüzün Örnek Görsellerine  klasöründe bulunan **IMAGESOFAPP** klasöründen erişebilirsiniz.  
+## Geliştirilen Arayüzün Örnek Görsellerine ekler klasöründe bulunan **IMAGESOFAPP** klasöründen erişebilirsiniz.  
 
 
 
