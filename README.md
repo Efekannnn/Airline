@@ -41,10 +41,12 @@ pip freeze > requirementstxt
 pip install -r requirements.txt(bu dosya boş gelirse ekler bölmesinde bulunan rquirments.txt dosyasının içindeki yazıları bu dosyaya kopyalayın)
 
 4. Veritabanını migrate edin:
+   
 komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
 python manage.py migrate
 
 5. Sunucuyu başlatın:
+   
 komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
 python manage.py runserver
 
