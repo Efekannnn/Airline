@@ -25,7 +25,7 @@ git clone https://github.com/Efekannnn/airline.git
 
 2. Bir ide aracılığıyla ile klonladığınız projeyi açın ve Sanal ortam oluşturup oluşturduğunuz sanal ortamı etkinleştirin.
 
-komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
+Komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
 
 Unix/Linux veya MacOs için:
 python3 -m venv myenv
@@ -42,12 +42,12 @@ pip install -r requirements.txt(bu dosya boş gelirse ekler bölmesinde bulunan 
 
 4. Veritabanını migrate edin:
    
-komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
+Komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
 python manage.py migrate
 
 5. Sunucuyu başlatın:
    
-komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
+Komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
 python manage.py runserver
 
 
