@@ -1,4 +1,4 @@
-# Bilet Satış ve Yönetim Uygulaması
+# Uçuş Rezervasyon ve Yönetim Uygulaması
 
 Bu uygulama, bir bilet satış ve yönetim platformudur. Uygulama kullanıcıların uçuşları aramasına, bilet rezervasyonu yapmasına ve yöneticilerin satılan biletleri yönetmesine olanak tanır.
 
@@ -27,11 +27,11 @@ git clone https://github.com/Efekannnn/airline.git
 
 komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
 
-Unix/Linux veya MacOs kodları:
+Unix/Linux veya MacOs için:
 python3 -m venv myenv
 source myenv/bin/activate
 
-Windows kodları: 
+Windows için: 
 py -m venv env
 .\env\Scripts\activate
 
@@ -49,7 +49,7 @@ komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(
 python manage.py runserver
 
 
-## Geliştirilen Arayüzün Örnek Görselleri
-Geliştirilen arayüzün örnek görsellerine ekler bölmesinde bulunan IMAGESOFAPP klasöründen erişebilirsiniz.  
+## Geliştirilen Arayüzün Örnek Görsellerine  klasöründe bulunan **IMAGESOFAPP** klasöründen erişebilirsiniz.  
+
 
 
