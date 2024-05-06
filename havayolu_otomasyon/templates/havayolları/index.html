@@ -1,0 +1,40 @@
+{% extends 'havayolları/layout.html' %} <!--layouts şablonunun üstüne ekler-->
+{% load static %}
+{% block title %}Uçuş Arama{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<div class="container">
+    <div class="row justify-content-center"> <!--satır oluşturma-->
+        <div class="col-lg-8"> <!--sutun oluşturma-->
+            <h2>Uçuş Arama</h2>
+            <form method="GET" action="{% url 'flight_search' %}">
+                <div class="form-group">
+                    <label for="from_airport">Nereden:</label>
+                    <input type="text" class="form-control" id="from_airport" name="from_airport" placeholder="Kalkış Havalimanı"> <!-- form içine bilgileri istenen başıklrı yazar-->
+                </div>
+                <div class="form-group">
+                    <label for="to_airport">Nereye:</label>
+                    <input type="text" class="form-control" id="to_airport" name="to_airport" placeholder="Varış Havalimanı">
+                </div>
+                <div class="form-group">
+                    <label for="start_date">Başlangıç Tarihi:</label>
+                    <input type="date" class="form-control" id="start_date" name="start_date">
+                </div>
+                <div class="form-group">
+                    <label for="end_date">Bitiş Tarihi:</label>
+                    <input type="date" class="form-control" id="end_date" name="end_date">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger">Ara</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4"> <!--bilgilendirme metnini eklemek için satır oluşturma-->
+        <div class="col-lg-5 alert alert-info"> <!--bilgilendirme metnini eklemek için sütun oluşturma-->
+            Değerli Yolcularımız, Irak, İran, Ürdün ve Lübnan’daki mevcut durum sebebiyle Irak, İran, Ürdün ve Lübnan uçuşlarımız yoktur.
+        </div>
+    </div>
+</div>
+{% endblock %}
