@@ -21,7 +21,7 @@ Bu uygulama, bir bilet satış ve yönetim platformudur. Uygulama kullanıcılar
 1. Projeyi klonlayın:
 
 Komut istemini(terminali) açın ve alttaki kodu yazarak uygulamayı klonlayın. 
-git clone https://github.com/Efekannnn/airline.git
+git clone https://github.com/Efekannnn/airline-automation-website.git
 
 2. Bir ide aracılığıyla ile klonladığınız projeyi açın ve Sanal ortam oluşturup oluşturduğunuz sanal ortamı etkinleştirin.
 
