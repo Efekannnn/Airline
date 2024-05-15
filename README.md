@@ -21,7 +21,7 @@ Bu uygulama, bir bilet satış ve yönetim platformudur. Uygulama kullanıcılar
 1. Projeyi klonlayın:
 
 Komut istemini(terminali) açın ve alttaki kodu yazarak uygulamayı klonlayın. 
-git clone https://github.com/Efekannnn/airline.git
+git clone https://github.com/Efekannnn/airline-automation-website.git
 
 2. Bir ide aracılığıyla ile klonladığınız projeyi açın ve Sanal ortam oluşturup oluşturduğunuz sanal ortamı etkinleştirin.
 
@@ -50,6 +50,9 @@ python manage.py migrate
 Komut istemini açıp projenin olduğu dosyaya eriştikten sonra komut istemine(terminale) aşağıdakileri yazın.
 python manage.py runserver
 
+6. Admin belirleyin:
+
+Komut istemciyi açıp python manage.py createsuperuser komutu ile admin belirleyin ve artık http://127.0.0.1:8000/admin/ bağlantısından admin girişi yapabilirsiniz.
 
 ## Geliştirilen Arayüzün Örnek Görsellerine ekler klasöründe bulunan **IMAGESOFAPP** klasöründen erişebilirsiniz.  
 
