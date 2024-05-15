@@ -3,7 +3,7 @@ from pyexpat.errors import messages
 import time
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render , redirect
-from .models import Ucuslar, YolcuUcuslari, Yolcular
+from .models import *
 
 
 def anasayfa(request):
@@ -15,10 +15,13 @@ def anasayfa(request):
 
 def flight_search(request):
     if request.method == 'GET':
-        from_airport = request.GET.get('from_airport')
-        to_airport = request.GET.get('to_airport')
+        from_airport_name = request.GET.get('from_airport')
+        to_airport_name = request.GET.get('to_airport')
         start_date = request.GET.get('start_date')
         end_date = request.GET.get('end_date')
+
+        from_airport = Havaalanlari.objects.get(Kalkış=from_airport_name)
+        to_airport = Havaalanlari.objects.get(Varış=to_airport_name)
 
         ##uçuş filtreleme
         flights = Ucuslar.objects.filter(

@@ -25,6 +25,7 @@
                                         <p><strong>Havayolu:</strong> {{ flight.havayolu_adi }}</p>
                                         <p><strong>Uçuş Süresi:</strong> {{ flight.ucus_sure }} dakika</p>
                                         <p><strong>Uçak No:</strong> {{ flight.ucak_no }}</p>
+                                        <p><strong>Ücret:</strong> {{flight.ucret}} TL </p>
                                         <form action="{% url 'bilet_kaydet' %}" method="post">
                                             <input type="hidden" id="selected-flight-id" value="{{ flight.ucus_id }}"> <!-- uçuş idyi gizlice yerleştirme -->
                                             {% csrf_token %} <!--web saldırılarına karşı kllanılır-->

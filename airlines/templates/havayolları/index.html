@@ -1,21 +1,29 @@
-{% extends 'havayolları/layout.html' %} <!--layouts şablonunun üstüne ekler-->
+{% extends 'havayolları/layout.html' %}
 {% load static %}
 {% block title %}Uçuş Arama{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 <div class="container">
-    <div class="row justify-content-center"> <!--satır oluşturma-->
-        <div class="col-lg-8"> <!--sutun oluşturma-->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
             <h2>Uçuş Arama</h2>
             <form method="GET" action="{% url 'flight_search' %}">
                 <div class="form-group">
                     <label for="from_airport">Nereden:</label>
-                    <input type="text" class="form-control" id="from_airport" name="from_airport" placeholder="Kalkış Havalimanı"> <!-- form içine bilgileri istenen başıklrı yazar-->
+                    <select class="form-control" id="from_airport" name="from_airport">
+                        {% for ucus in ucuslar %}
+                            <option value="{{ ucus.pk }}">{{ ucus.kalkis_havaalani_id }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="to_airport">Nereye:</label>
-                    <input type="text" class="form-control" id="to_airport" name="to_airport" placeholder="Varış Havalimanı">
+                    <select class="form-control" id="to_airport" name="to_airport">
+                        {% for ucus in ucuslar %}
+                            <option value="{{ ucus.pk }}">{{ ucus.varis_havaalani_id }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="start_date">Başlangıç Tarihi:</label>
@@ -31,8 +39,8 @@
             </form>
         </div>
     </div>
-    <div class="row justify-content-center mt-4"> <!--bilgilendirme metnini eklemek için satır oluşturma-->
-        <div class="col-lg-5 alert alert-info"> <!--bilgilendirme metnini eklemek için sütun oluşturma-->
+    <div class="row justify-content-center mt-4">
+        <div class="col-lg-5 alert alert-info">
             Değerli Yolcularımız, Irak, İran, Ürdün ve Lübnan’daki mevcut durum sebebiyle Irak, İran, Ürdün ve Lübnan uçuşlarımız yoktur.
         </div>
     </div>

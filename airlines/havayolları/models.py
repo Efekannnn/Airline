@@ -1,14 +1,28 @@
 from django.db import models
 
+class Havaalanlari(models.Model):
+    havaalani_ismi = models.CharField(max_length=100)
+    sehir = models.CharField(max_length=100)
+    ulke = models.CharField(max_length=100)
+    kod = models.CharField(max_length=3)
+
+    class Meta:
+        db_table = 'havaalanlari'
+
+    def __str__(self):
+        return f"{self.sehir} ({self.kod})"
+
+
 class Ucuslar(models.Model):
     ucus_id = models.AutoField(primary_key=True)
-    kalkis_havaalani_id = models.CharField(max_length=50)
-    varis_havaalani_id = models.CharField(max_length=50)
+    kalkis_havaalani_id = models.ForeignKey(Havaalanlari, on_delete=models.CASCADE, related_name="Kalkış")
+    varis_havaalani_id = models.ForeignKey(Havaalanlari, on_delete=models.CASCADE, related_name="Varış")
     kalkis_tarihi = models.DateField()
     varis_tarihi = models.DateField()
     havayolu_adi = models.CharField(max_length=255)
     ucus_sure = models.IntegerField()
     ucak_no = models.CharField(max_length=50)
+    ucret = models.IntegerField()
 
     class Meta:
         db_table = 'ucuslar'
@@ -38,13 +52,4 @@ class YolcuUcuslari(models.Model):
     def __str__(self):
         return f"{self.yolcu} - {self.ucus}"
 
-class Havaalanlari(models.Model):
-    havaalani_ismi = models.CharField(max_length=100)
-    sehir = models.CharField(max_length=100)
-    ulke = models.CharField(max_length=100)
 
-    class Meta:
-        db_table = 'havaalanlari'
-
-    def __str__(self):
-        return self.havaalani_ismi
