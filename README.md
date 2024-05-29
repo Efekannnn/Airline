@@ -1,6 +1,4 @@
 ![image](https://github.com/Efekannnn/airline-automation-website/assets/139994163/5ce12d4d-9ded-46ae-886b-09d09a403eb8)
-
-
 # Uçuş Rezervasyon ve Yönetim Uygulaması
 
 Bu uygulama, bir bilet satış ve yönetim platformudur. Uygulama kullanıcıların uçuşları aramasına, bilet rezervasyonu yapmasına ve yöneticilerin satılan biletleri yönetmesine olanak tanır.
@@ -57,7 +55,7 @@ python manage.py runserver
 
 Komut istemciyi açıp python manage.py createsuperuser komutu ile admin belirleyin ve artık http://127.0.0.1:8000/admin/ bağlantısından admin girişi yapabilirsiniz.
 
-## Geliştirilen Arayüzün Örnek Görsellerine ekler klasöründe bulunan **IMAGESOFAPP** klasöründen erişebilirsiniz.  
+## Geliştirilen Arayüzün Diğer Örnek Görsellerine ekler klasöründe bulunan **IMAGESOFAPP** klasöründen erişebilirsiniz.  
 
 
 
