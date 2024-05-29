@@ -5,7 +5,7 @@
 ![image](https://github.com/Efekannnn/airline-automation-website/assets/139994163/13b1dfd6-f5d9-474b-a488-2155a14c4efc)
 # Bilet Al
 ![image](https://github.com/Efekannnn/airline-automation-website/assets/139994163/225a0f34-2e05-4b93-944c-2464090af32d)
-# Hakkımızda
+# İletişim
 ![image](https://github.com/Efekannnn/airline-automation-website/assets/139994163/4d1dd363-31db-417c-9cd9-b9c390bd3c5e)
 
 Bu uygulama, bir bilet satış ve yönetim platformudur. Uygulama kullanıcıların uçuşları aramasına, bilet rezervasyonu yapmasına ve yöneticilerin satılan biletleri yönetmesine olanak tanır.
